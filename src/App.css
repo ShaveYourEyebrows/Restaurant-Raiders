@@ -124,9 +124,9 @@
 
 .mainBundle{
   background-color: #1e2e4e;
-  position: fixed;
-  margin-left: 50px;
-  width: 400px;
+  position: absolute;
+  left: 150px;
+  width: 800px;
 }
 
 .mainTitle{
