@@ -6,7 +6,8 @@ function Contact(){
         <>
             <Topbar />
             <div>
-                <h1>Manager Contact Details:</h1>
+                <h2 className='contactDetails'>Manager Contact Details:</h2>
+                <h4 className='phoneNumber'>Manager John: 087-457-4007</h4>
             </div>
         </>
     );
