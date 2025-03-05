@@ -13,9 +13,9 @@ function Navigator() {
     // Prevent the browser from reloading the page
     e.preventDefault();
 
-    //if(e.target[0].value.length !== 0 && e.target[1].value.length !== 0){
-      //navigate('/main')
-    //}
+    if(e.target[0].value.length !== 0 && e.target[1].value.length !== 0){
+      navigate('/main')
+    }
   }
 
     const msg = "Welcome to Restaurant Raiders";
