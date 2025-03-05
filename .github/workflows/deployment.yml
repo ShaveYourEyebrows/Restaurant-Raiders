@@ -20,10 +20,10 @@ jobs:
       - name: Set-up Node
         uses: actions/setup-node@v4
         with:
-          node-version: 22.14.0
+          node-version: 22
 
       - name: Install dependency
-        run: npm install;
+        run: -rf node_modules/; npm install;
 
       - name: Build frontend
         run: ls; npm run build;
