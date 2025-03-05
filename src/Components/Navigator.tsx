@@ -13,7 +13,7 @@ function Navigator() {
     // Prevent the browser from reloading the page
     e.preventDefault();
 
-    console.log(e.target[0])
+    console.log("Boobly bop")
     console.log(e.target.value[1])
 
     if(e.target.value[0].length !== 0 && e.target.value[1].length !== 0){
