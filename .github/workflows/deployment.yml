@@ -23,7 +23,7 @@ jobs:
           node-version: 22
 
       - name: Install dependency
-        run: -rf node_modules/; npm install;
+        run: rm -rf node_modules/; npm install;
 
       - name: Build frontend
         run: ls; npm run build;
