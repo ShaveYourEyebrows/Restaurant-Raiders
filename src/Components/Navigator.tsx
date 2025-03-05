@@ -13,12 +13,6 @@ function Navigator() {
     // Prevent the browser from reloading the page
     e.preventDefault();
 
-
-    console.log("Boobly bop")
-    console.log(typeof(e))
-    console.log(e.target)
-    console.log(e.target[0].value)
-
     if(e.target[0].value.length !== 0 && e.target[1].value.length !== 0){
       navigate('/main')
     }
