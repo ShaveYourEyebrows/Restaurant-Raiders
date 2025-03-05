@@ -10,9 +10,20 @@
   pointer-events: none;
 }
 
+.mainScreenLogo {
+  height: 50vmin;
+  pointer-events: none;
+  position: relative;
+  float: left;
+  left: 400px;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .logo {
     animation: App-logo-spin infinite 5s linear;
+  }
+  .mainScreenLogo{
+    animation: App-logo-spin infinite 1.5s linear;
   }
 }
 
@@ -98,7 +109,7 @@
   color: azure;
   float: left;
   margin-top: 30px;
-  margin-left: 1050px;
+  margin-left: 1200px;
 }
 
 .Contact-Link{
@@ -123,10 +134,10 @@
 }
 
 .mainBundle{
-  background-color: #1e2e4e;
+  background-color: #17233a;
   position: absolute;
   left: 150px;
-  width: 800px;
+  width: 700px;
 }
 
 .mainTitle{

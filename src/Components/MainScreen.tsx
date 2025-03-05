@@ -1,5 +1,6 @@
 import Topbar from './Topbar.tsx';
 import '../App.css';
+import logo from './logo512.png'
 
 function MainScreen(){
     return(
@@ -14,6 +15,7 @@ function MainScreen(){
                     out.
                 </p>
             </div>
+            <img src= {logo} className="mainScreenLogo" alt="logo goes here" />
         </>
     );
 }

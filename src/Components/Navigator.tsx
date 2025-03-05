@@ -15,6 +15,8 @@ function Navigator() {
 
     if(e.target[0].value.length !== 0 && e.target[1].value.length !== 0){
       navigate('/main')
+    }else{
+      alert("You have to enter a username and password!")
     }
   }
 
