@@ -147,3 +147,31 @@
 .infoPara{
   color: aqua;
 }
+
+.numDiv{
+  position: relative;
+  float: left;
+  width: 650px;
+  margin-right: 620px;
+  background-color: rgb(55, 77, 78);
+}
+
+.phoneNumberItem{
+  color: azure;
+  font-size: medium;
+}
+
+.noticeDiv{
+  position: relative;
+  float: left;
+  top: 100px;
+  width: 650px;
+  margin-right: 620px;
+  background-color: rgb(55, 77, 78);
+}
+
+.noticePara{
+  color: azure;
+  font-size: large;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
