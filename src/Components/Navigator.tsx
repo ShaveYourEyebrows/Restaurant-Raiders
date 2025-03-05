@@ -13,8 +13,6 @@ function Navigator() {
     // Prevent the browser from reloading the page
     e.preventDefault();
 
-    console.log(e.target)
-    
     if(e.target[0].value.length !== 0 && e.target[1].value.length !== 0){
       navigate('/main')
     }
