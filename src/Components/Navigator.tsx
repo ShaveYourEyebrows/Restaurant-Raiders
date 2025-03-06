@@ -3,7 +3,7 @@ import UsernameInput from './UsernameInput.tsx';
 import PasswordInput from './PasswordInput.tsx';
 import Message from './Message.tsx';
 import { useNavigate } from 'react-router-dom';
-import logo from './logo512.png'
+import logo from './rr-logo.png'
 
 function Navigator() {
 

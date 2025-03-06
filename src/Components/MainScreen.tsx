@@ -1,6 +1,6 @@
 import Topbar from './Topbar.tsx';
 import '../App.css';
-import logo from './logo512.png'
+import logo from './rr-logo.png'
 
 function MainScreen(){
     return(
