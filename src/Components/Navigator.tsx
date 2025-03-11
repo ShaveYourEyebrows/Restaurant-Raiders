@@ -13,15 +13,24 @@ function Navigator() {
     // Prevent the browser from reloading the page
     e.preventDefault();
 
+    var dangerousChars = ["'", '"', "\\", "%", "\n", "\_", "\b", "\%", "\r", "\t", "\Z"]
+    var failVar = true;
+
     if(e.target[0].value.length !== 0 && e.target[1].value.length !== 0){
-      if(e.target[0].value.includes("'") || e.target[1].value.includes("'")){
-        e.target[0].value = "";
-        e.target[1].value = "";
-        alert("Invalid character used in query! (May be attempted SQL injection)")
-      }else{
+      dangerousChars.every((dangerousChar) => {
+        if(e.target[0].value.includes(dangerousChar) || e.target[1].value.includes(dangerousChar)){
+          e.target[0].value = "";
+          e.target[1].value = "";
+          alert("Invalid character used in query! (May be attempted SQL injection)")
+          failVar = false;
+          return false;
+        }else{
+          return true;
+        }
+      })
+      if(failVar === true){
         navigate('/main')
       }
-      //navigate('/main')
     }else{
       e.target[0].value = "";
       e.target[1].value = "";
