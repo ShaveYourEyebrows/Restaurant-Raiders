@@ -14,8 +14,17 @@ function Navigator() {
     e.preventDefault();
 
     if(e.target[0].value.length !== 0 && e.target[1].value.length !== 0){
-      navigate('/main')
+      if(e.target[0].value.includes("'") || e.target[1].value.includes("'")){
+        e.target[0].value = "";
+        e.target[1].value = "";
+        alert("Invalid character used in query! (May be attempted SQL injection)")
+      }else{
+        navigate('/main')
+      }
+      //navigate('/main')
     }else{
+      e.target[0].value = "";
+      e.target[1].value = "";
       alert("You have to enter a username and password!")
     }
   }
