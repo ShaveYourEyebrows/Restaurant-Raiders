@@ -23,7 +23,12 @@ const dispatch = useDispatch();
     var dangerousChars = ["'", '"', "\\", "%", "\n", "\_", "\b", "\%", "\r", "\t", "\Z"]
     var failVar = true;
 
-    if(e.target[0].value.length !== 0 && e.target[1].value.length !== 0){
+    if(e.target[0].value.length >= 40 || e.target[1].value.length >= 40){
+      e.target[0].value = "";
+      e.target[1].value = "";
+      alert("Your username or password is too long!")
+    }
+    else if(e.target[0].value.length !== 0 && e.target[1].value.length !== 0){
       dangerousChars.every((dangerousChar) => {
         if(e.target[0].value.includes(dangerousChar) || e.target[1].value.includes(dangerousChar)){
           e.target[0].value = "";
