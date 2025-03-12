@@ -4,8 +4,15 @@ import PasswordInput from './PasswordInput.tsx';
 import Message from './Message.tsx';
 import { useNavigate } from 'react-router-dom';
 import logo from './rr-logo.png'
+import { useSelector, connect } from 'react-redux';
+import { RootState } from '../store.ts';
+import { getInTheSystem } from '../store.ts';
+import { useDispatch } from 'react-redux';
 
 function Navigator() {
+
+const logLad = useSelector((state : RootState) => state.login.loggedIn); //This is to show I can access the state at any time
+const dispatch = useDispatch();
 
   let navigate = useNavigate();
 
@@ -29,6 +36,7 @@ function Navigator() {
         }
       })
       if(failVar === true){
+        dispatch(getInTheSystem())
         navigate('/main')
       }
     }else{
@@ -56,4 +64,4 @@ function Navigator() {
     );
 }
 
-export default Navigator;
+export default connect(store=>store)(Navigator);
